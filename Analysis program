@@ -9,7 +9,7 @@ end module
 
 !-----------------------------------------------------------------------------------------------------------------------!
 
-! My module for utility functions in data analysis and hypotesis test in this exercise
+! My module for utility functions in data analysis and hypothesis test in this exercise
 
 module utlfunc
 
@@ -352,7 +352,7 @@ module utlfunc
 	
 	!---------------------------------------------------------------------------------------------------------------!
 
-! Hypotesys test for 3 distributions applying chi^2's test
+! Hypothesys test for 3 distributions applying chi^2's test
 	
 	subroutine tstar_test(tstar, cont1, cont2, cont3, xk, xk2, xk3, n, tau_est, delta, k)
 	
@@ -501,13 +501,13 @@ program Data_analysis
 	call tstar_test(tstar_lik, cont1, cont2, cont3, xk, xk2, xk3, n, tau_est_lik, delta, 10.0_rk)
 	
 	print*, ""
-	print*, "Hypotesys test for chi^2 tau estimation"
+	print*, "Hypothesys test for chi^2 tau estimation"
 	print*,"t-alpha 1 expected: 17.28","	obtained: ", tstar_chi(1)
 	print*,"t-alpha 2 expected: 12.02","	obtained: ", tstar_chi(2)
 	print*,"t-alpha 3 expected: 12.02","	obtained: ", tstar_chi(3)
 	
 	print*, ""
-	print*, "Hypotesis test for Maximum Likelihood tau estimation"
+	print*, "Hypothesis test for Maximum Likelihood tau estimation"
 	print*,"t-alpha 1 expected: 17.28","	obtained: ", tstar_lik(1)
 	print*,"t-alpha 2 expected: 12.02","	obtained: ", tstar_lik(2)
 	print*,"t-alpha 3 expected: 12.02","	obtained: ", tstar_lik(3)
