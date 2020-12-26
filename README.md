@@ -18,7 +18,7 @@ The program is complete but there are some parts of code that can be optimized, 
 
 # Notes
 
-Put the 'data.txt' file and the program file in the same folder.
+Put the 'dati.txt' file and the program file in the same folder.
 
 One example is on the following lines:
 
