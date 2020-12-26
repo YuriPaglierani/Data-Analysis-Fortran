@@ -14,7 +14,7 @@ The program is complete but there are some parts of code that can be optimized, 
 
 - 3 Erlang distributions
 
-- Hypotesis test
+- Hypothesis test
 
 # Notes
 
