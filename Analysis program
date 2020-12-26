@@ -432,7 +432,7 @@ program Data_analysis
 	end do
 	close (unit = 0)
 	
-	tau = sum(t)/n(1)				! stima di tau in maniera analitica
+	tau = sum(t)/n(1)				! analytical estimation of tau
 	print*,"il tuo tau è", tau
 	
 	call k_event(t, 2, t2)
@@ -463,7 +463,7 @@ program Data_analysis
 		print*,i, ":", delta(i)
 	end do
 	
-	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////////// inizio esercizio
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////////// 
 
 	call xavgbinner(xk, tmin(1), delta(1))
 	call xavgbinner(xk2, tmin(2), delta(2))
@@ -473,7 +473,7 @@ program Data_analysis
 	call counteventbin(t2, xk2, delta(2), cont2)
 	call counteventbin(t3, xk3, delta(3), cont3)
 		
-	!!!!!!!!!!!!!!!!!!!!!//////////////////////minimo quadrato 1, 2 e 3
+	!!!!!!!!!!!!!!!!!!!!!////////////////////// Least squares 1, 2 and 3
 	
 	call MMQR('min1.txt', len('min1.txt'), n(1), xk, delta(1), cont1, tau, tau_est_chi(1), 1)
 	
@@ -481,7 +481,7 @@ program Data_analysis
 	
 	call MMQR('min3.txt', len('min3.txt'), n(3), xk3, delta(3), cont3, tau, tau_est_chi(3), 3)
 	
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! likelihood 1, 2 e 3
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! likelihood 1, 2 and 3
 
 	call MML('max1.txt', len('max1.txt'), n(1), xk, delta(1), cont1, tau, tau_est_lik(1), 1)
 	
@@ -489,7 +489,7 @@ program Data_analysis
 	
 	call MML('max3.txt', len('max3.txt'), n(3), xk3, delta(3), cont3, tau, tau_est_lik(3), 3)
 	
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////////// test d'ipotesi
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////////// Hypothesis test
 	
 	call count_eff(1.0_rk*cont1, contsuff(1), 10)
 	call count_eff(1.0_rk*cont2, contsuff(2), 10)
