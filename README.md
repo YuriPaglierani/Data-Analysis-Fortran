@@ -1,10 +1,12 @@
 # Data Analysis in Fortran
 
-Data analysis on car's waiting time in highway, the 606 values can be found in the section 'dati.txt' and they represent the waiting time for 1-event.
+The data analysis program was written from scratch in Fortran during my Bachelor's. 
 
-The analysis is made on the distributions of the data, in the program are used Erlang's distributions for 1, 2 and 3 events.
+The objective is to analyze a car's waiting time on the highway. The 606 values have been collected by my patient friend Alessandro Namar, and they can be found in the section 'dati.txt' (they represent the waiting time for one event).
 
-The program is complete but there are some parts of code that can be optimized, like the search of max and min in the maximum likelihood and least squares methods.
+The hypothesis is that the waiting time for n events distributes following Erlang's distributions with k = n.
+
+The program works but there are a lot of improvements that can be done, such as the search of max and min in the maximum likelihood and least-squares methods.
 
 # Core points
 
