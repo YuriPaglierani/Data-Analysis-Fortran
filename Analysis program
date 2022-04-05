@@ -16,7 +16,7 @@ module utlfunc
 	use modkind
 	implicit none
 	
-	integer, parameter :: e = 2.71828182845904523536, pi = 3.14159265358
+	real(kind=kind(1.0d0)), parameter :: e = 2.71828182845904523536, pi = 3.14159265358
 	
 	contains
 
